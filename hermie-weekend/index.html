@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hermie Weekend — Actually good weekend plans near Naperville</title>
+  <meta name="description" content="Get a short Friday list of actually good weekend plans near Naperville: date nights, kid-friendly ideas, cheap/free picks, rainy-day backups, and hidden gems." />
+  <style>
+    :root {
+      --ink: #202015;
+      --muted: #686451;
+      --paper: #fbf6ea;
+      --card: #fffdf7;
+      --line: #e2d8c1;
+      --green: #23483b;
+      --green-2: #2e6552;
+      --sun: #f0b64c;
+      --clay: #c46843;
+      --blue: #416a85;
+      --shadow: 0 24px 70px rgba(36, 30, 12, .13);
+      font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 10% 10%, rgba(240, 182, 76, .28), transparent 24rem),
+        radial-gradient(circle at 90% 0%, rgba(65, 106, 133, .18), transparent 22rem),
+        var(--paper);
+      line-height: 1.5;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
+    header { padding: 22px 0; }
+    .nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .brand { display:flex; align-items:center; gap: 10px; font-weight: 850; letter-spacing: -.03em; }
+    .mark { width: 36px; height: 36px; border-radius: 12px; display:grid; place-items:center; background: var(--green); color: var(--sun); box-shadow: 0 8px 20px rgba(35,72,59,.25); }
+    .tag { color: var(--muted); font-size: 14px; }
+    .pill { border: 1px solid var(--line); background: rgba(255,255,255,.5); padding: 9px 13px; border-radius: 999px; color: var(--muted); font-size: 14px; }
+    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; padding: 54px 0 64px; }
+    h1 { font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: clamp(48px, 7vw, 92px); line-height: .92; letter-spacing: -.07em; margin: 0 0 24px; }
+    .lede { font-size: clamp(18px, 2.1vw, 24px); color: var(--muted); max-width: 660px; margin: 0 0 28px; }
+    .cta-row { display:flex; flex-wrap:wrap; gap: 12px; align-items:center; }
+    .btn { display:inline-flex; justify-content:center; align-items:center; min-height: 48px; padding: 13px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; border: 1px solid transparent; transition: transform .15s ease, box-shadow .15s ease; }
+    .btn:hover { transform: translateY(-1px); }
+    .btn-primary { background: var(--green); color: #fffdf7; box-shadow: 0 12px 28px rgba(35,72,59,.22); }
+    .btn-secondary { background: rgba(255,255,255,.56); border-color: var(--line); color: var(--ink); }
+    .note { margin-top: 14px; color: var(--muted); font-size: 14px; }
+    .phone { background: var(--card); border: 1px solid var(--line); border-radius: 34px; padding: 16px; box-shadow: var(--shadow); transform: rotate(1deg); }
+    .screen { border-radius: 24px; background: #10271f; color: #fdf7ea; overflow:hidden; border: 8px solid #172c24; }
+    .screen-top { padding: 18px; background: rgba(255,255,255,.06); display:flex; justify-content:space-between; align-items:center; font-size: 13px; color: #d8e8dc; }
+    .messages { padding: 18px; display:grid; gap: 12px; }
+    .msg { background: #fdf7ea; color: var(--ink); border-radius: 18px; padding: 14px; box-shadow: 0 10px 22px rgba(0,0,0,.12); }
+    .msg h3 { margin: 0 0 8px; font-size: 18px; }
+    .msg p { margin: 6px 0; color: #4c493d; }
+    .chip { display:inline-block; background: rgba(240,182,76,.32); color: #5f4210; border:1px solid rgba(240,182,76,.5); border-radius:999px; padding:4px 9px; font-size:12px; font-weight:800; margin-bottom: 8px; }
+    section { padding: 50px 0; }
+    .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
+    .card { background: rgba(255,253,247,.72); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
+    .card strong { display:block; margin-bottom: 8px; }
+    .card p { margin:0; color:var(--muted); }
+    .sample { display:grid; grid-template-columns: .85fr 1.15fr; gap: 18px; align-items: stretch; }
+    .sample aside { background: var(--green); color: #fffdf7; border-radius: 28px; padding: 28px; }
+    .sample aside h2 { font-family: ui-serif, Georgia, serif; font-size: 40px; line-height: 1; margin:0 0 12px; letter-spacing:-.04em; }
+    .list { display:grid; gap: 10px; }
+    .pick { background: var(--card); border:1px solid var(--line); border-radius: 18px; padding: 16px; }
+    .pick b { color: var(--green); }
+    .privacy { display:flex; gap: 12px; align-items:flex-start; background: rgba(196,104,67,.12); border: 1px solid rgba(196,104,67,.22); border-radius: 20px; padding: 16px; color: #614130; }
+    footer { padding: 36px 0 60px; color: var(--muted); }
+    @media (max-width: 820px) {
+      .hero, .sample { grid-template-columns: 1fr; }
+      .grid { grid-template-columns: 1fr 1fr; }
+      .phone { transform: none; }
+      h1 { font-size: 54px; }
+    }
+    @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } .nav { align-items:flex-start; flex-direction:column; } }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap nav">
+      <div>
+        <div class="brand"><div class="mark">✦</div><span>Hermie Weekend</span></div>
+        <div class="tag">Naperville • Aurora • Lisle • Plainfield • western suburbs</div>
+      </div>
+      <div class="pill">Anonymous local guide • Fridays only</div>
+    </div>
+  </header>
+
+  <main>
+    <div class="wrap hero">
+      <div>
+        <h1>Never waste a weekend near Naperville again.</h1>
+        <p class="lede">Get a short Friday list of actually good plans: date nights, kid-friendly ideas, cheap/free picks, rainy-day backups, and hidden gems within an easy drive.</p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="https://t.me/hermieweekend">Join the free Friday list</a>
+          <a class="btn btn-secondary" href="https://tally.so/r/b5209g">Submit an event</a>
+        </div>
+        <div class="note">No spam. No influencer nonsense. Just useful weekend ideas.</div>
+      </div>
+      <div class="phone" aria-label="Sample Telegram weekend plan">
+        <div class="screen">
+          <div class="screen-top"><b>Hermie Weekend</b><span>Friday 8:30 AM</span></div>
+          <div class="messages">
+            <div class="msg">
+              <span class="chip">This weekend</span>
+              <h3>5 low-effort plans near Naperville</h3>
+              <p><b>Date night:</b> dinner + live music, with dessert nearby.</p>
+              <p><b>Kids:</b> indoor activity + pizza fallback if weather turns.</p>
+              <p><b>Cheap/free:</b> market, walk, coffee stop.</p>
+            </div>
+            <div class="msg">
+              <span class="chip">Rain backup</span>
+              <p>A complete indoor plan that does not require driving downtown.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <section>
+      <div class="wrap grid">
+        <div class="card"><strong>Date nights</strong><p>Ready-to-go mini itineraries that feel planned, not random.</p></div>
+        <div class="card"><strong>Family plans</strong><p>Kid-friendly ideas with food and weather backups.</p></div>
+        <div class="card"><strong>Cheap/free</strong><p>Useful picks for when you want to leave the house without spending $150.</p></div>
+        <div class="card"><strong>Hidden gems</strong><p>Local places and events you might miss while scrolling big event sites.</p></div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap sample">
+        <aside>
+          <h2>What you get each Friday</h2>
+          <p>One compact post you can skim in under a minute, then forward to the person who always asks, “what should we do?”</p>
+        </aside>
+        <div class="list">
+          <div class="pick"><b>Best date night:</b> A food + activity pairing with estimated vibe, distance, and backup option.</div>
+          <div class="pick"><b>Best with kids:</b> A simple plan that avoids downtown Chicago logistics.</div>
+          <div class="pick"><b>Best cheap/free:</b> A low-cost pick that still feels like doing something.</div>
+          <div class="pick"><b>Best rainy-day backup:</b> Indoor plan, parking sanity check, and nearby snack stop.</div>
+          <div class="pick"><b>One hidden gem:</b> A local place worth knowing about.</div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap privacy">
+        <strong>Built to be low-noise.</strong>
+        <span>Hermie Weekend is designed as a simple local utility, not a social feed. Public channel, anonymous operator, and one useful post per week while we test demand.</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">© Hermie Weekend. Independent local guide. Not affiliated with the City of Naperville or any venue.</div>
+  </footer>
+</body>
+</html>
