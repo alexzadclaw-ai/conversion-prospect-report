@@ -7,153 +7,226 @@
   <meta name="description" content="Get a short Friday list of actually good weekend plans near Naperville: date nights, kid-friendly ideas, cheap/free picks, rainy-day backups, and hidden gems." />
   <style>
     :root {
-      --ink: #202015;
-      --muted: #686451;
-      --paper: #fbf6ea;
-      --card: #fffdf7;
-      --line: #e2d8c1;
-      --green: #23483b;
-      --green-2: #2e6552;
-      --sun: #f0b64c;
-      --clay: #c46843;
-      --blue: #416a85;
-      --shadow: 0 24px 70px rgba(36, 30, 12, .13);
+      --ink: #17140f;
+      --cream: #fff7e8;
+      --paper: #f7ead4;
+      --muted: #756a5b;
+      --orange: #ff7a36;
+      --gold: #f7c95f;
+      --blue: #155c7a;
+      --green: #174f43;
+      --plum: #4f285e;
+      --line: rgba(36, 25, 12, .16);
+      --shadow: 0 28px 80px rgba(39, 24, 8, .22);
       font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
     }
     * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
     body {
       margin: 0;
       color: var(--ink);
       background:
-        radial-gradient(circle at 10% 10%, rgba(240, 182, 76, .28), transparent 24rem),
-        radial-gradient(circle at 90% 0%, rgba(65, 106, 133, .18), transparent 22rem),
-        var(--paper);
-      line-height: 1.5;
+        radial-gradient(circle at 8% 5%, rgba(255, 122, 54, .30), transparent 25rem),
+        radial-gradient(circle at 88% 0%, rgba(21, 92, 122, .22), transparent 26rem),
+        linear-gradient(180deg, #fff1d6 0%, #f8ead5 42%, #fffaf0 100%);
+      line-height: 1.45;
+      overflow-x: hidden;
     }
     a { color: inherit; }
-    .wrap { width: min(1120px, calc(100% - 32px)); margin: 0 auto; }
-    header { padding: 22px 0; }
-    .nav { display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .brand { display:flex; align-items:center; gap: 10px; font-weight: 850; letter-spacing: -.03em; }
-    .mark { width: 36px; height: 36px; border-radius: 12px; display:grid; place-items:center; background: var(--green); color: var(--sun); box-shadow: 0 8px 20px rgba(35,72,59,.25); }
-    .tag { color: var(--muted); font-size: 14px; }
-    .pill { border: 1px solid var(--line); background: rgba(255,255,255,.5); padding: 9px 13px; border-radius: 999px; color: var(--muted); font-size: 14px; }
-    .hero { display:grid; grid-template-columns: 1.1fr .9fr; gap: 42px; align-items: center; padding: 54px 0 64px; }
-    h1 { font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: clamp(48px, 7vw, 92px); line-height: .92; letter-spacing: -.07em; margin: 0 0 24px; }
-    .lede { font-size: clamp(18px, 2.1vw, 24px); color: var(--muted); max-width: 660px; margin: 0 0 28px; }
-    .cta-row { display:flex; flex-wrap:wrap; gap: 12px; align-items:center; }
-    .btn { display:inline-flex; justify-content:center; align-items:center; min-height: 48px; padding: 13px 18px; border-radius: 999px; font-weight: 800; text-decoration: none; border: 1px solid transparent; transition: transform .15s ease, box-shadow .15s ease; }
-    .btn:hover { transform: translateY(-1px); }
-    .btn-primary { background: var(--green); color: #fffdf7; box-shadow: 0 12px 28px rgba(35,72,59,.22); }
-    .btn-secondary { background: rgba(255,255,255,.56); border-color: var(--line); color: var(--ink); }
-    .note { margin-top: 14px; color: var(--muted); font-size: 14px; }
-    .phone { background: var(--card); border: 1px solid var(--line); border-radius: 34px; padding: 16px; box-shadow: var(--shadow); transform: rotate(1deg); }
-    .screen { border-radius: 24px; background: #10271f; color: #fdf7ea; overflow:hidden; border: 8px solid #172c24; }
-    .screen-top { padding: 18px; background: rgba(255,255,255,.06); display:flex; justify-content:space-between; align-items:center; font-size: 13px; color: #d8e8dc; }
-    .messages { padding: 18px; display:grid; gap: 12px; }
-    .msg { background: #fdf7ea; color: var(--ink); border-radius: 18px; padding: 14px; box-shadow: 0 10px 22px rgba(0,0,0,.12); }
-    .msg h3 { margin: 0 0 8px; font-size: 18px; }
-    .msg p { margin: 6px 0; color: #4c493d; }
-    .chip { display:inline-block; background: rgba(240,182,76,.32); color: #5f4210; border:1px solid rgba(240,182,76,.5); border-radius:999px; padding:4px 9px; font-size:12px; font-weight:800; margin-bottom: 8px; }
-    section { padding: 50px 0; }
-    .grid { display:grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-    .card { background: rgba(255,253,247,.72); border: 1px solid var(--line); border-radius: 22px; padding: 20px; }
-    .card strong { display:block; margin-bottom: 8px; }
-    .card p { margin:0; color:var(--muted); }
-    .sample { display:grid; grid-template-columns: .85fr 1.15fr; gap: 18px; align-items: stretch; }
-    .sample aside { background: var(--green); color: #fffdf7; border-radius: 28px; padding: 28px; }
-    .sample aside h2 { font-family: ui-serif, Georgia, serif; font-size: 40px; line-height: 1; margin:0 0 12px; letter-spacing:-.04em; }
-    .list { display:grid; gap: 10px; }
-    .pick { background: var(--card); border:1px solid var(--line); border-radius: 18px; padding: 16px; }
-    .pick b { color: var(--green); }
-    .privacy { display:flex; gap: 12px; align-items:flex-start; background: rgba(196,104,67,.12); border: 1px solid rgba(196,104,67,.22); border-radius: 20px; padding: 16px; color: #614130; }
-    footer { padding: 36px 0 60px; color: var(--muted); }
-    @media (max-width: 820px) {
-      .hero, .sample { grid-template-columns: 1fr; }
-      .grid { grid-template-columns: 1fr 1fr; }
-      .phone { transform: none; }
-      h1 { font-size: 54px; }
+    img { max-width: 100%; display: block; }
+    .wrap { width: min(1160px, calc(100% - 32px)); margin: 0 auto; }
+
+    header { position: sticky; top: 0; z-index: 10; padding: 14px 0; backdrop-filter: blur(18px); background: rgba(255, 247, 232, .72); border-bottom: 1px solid rgba(255,255,255,.45); }
+    .nav { display:flex; align-items:center; justify-content:space-between; gap:16px; }
+    .brand { display:flex; align-items:center; gap:10px; font-weight: 950; letter-spacing: -.04em; font-size: 20px; }
+    .mark { width: 42px; height: 42px; border-radius: 15px; display:grid; place-items:center; color:#fff; background: conic-gradient(from 220deg, var(--orange), var(--gold), var(--green), var(--blue), var(--orange)); box-shadow: 0 12px 30px rgba(255,122,54,.28); }
+    .nav-actions { display:flex; align-items:center; gap:10px; }
+    .nav-note { color: var(--muted); font-size: 14px; }
+    .btn { display:inline-flex; align-items:center; justify-content:center; gap: 8px; min-height:48px; padding: 13px 19px; border-radius: 999px; text-decoration:none; font-weight: 900; border:1px solid transparent; transition: transform .16s ease, box-shadow .16s ease, background .16s ease; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { color: #fff; background: linear-gradient(135deg, #ff6b2b, #e8405a 45%, #7b3dff); box-shadow: 0 16px 36px rgba(232,64,90,.28); }
+    .btn-secondary { background: rgba(255,255,255,.66); border-color: rgba(23,20,15,.13); color: var(--ink); }
+
+    .hero { padding: 42px 0 54px; position: relative; }
+    .hero-grid { display:grid; grid-template-columns: .96fr 1.04fr; gap: 34px; align-items:center; }
+    .eyebrow { display:inline-flex; align-items:center; gap:9px; padding: 8px 12px; border-radius:999px; background: rgba(255,255,255,.65); border:1px solid rgba(23,20,15,.10); color: #5b3b20; font-weight:850; font-size:14px; box-shadow: 0 10px 30px rgba(39,24,8,.08); }
+    .pulse { width: 9px; height: 9px; border-radius:99px; background: #17b26a; box-shadow:0 0 0 6px rgba(23,178,106,.14); }
+    h1 { margin: 20px 0 20px; font-family: ui-serif, Georgia, Cambria, "Times New Roman", serif; font-size: clamp(54px, 8vw, 104px); letter-spacing: -.075em; line-height: .88; max-width: 760px; }
+    .lede { margin: 0 0 28px; color: #5d5145; font-size: clamp(19px, 2.3vw, 26px); max-width: 620px; }
+    .micro { margin-top: 14px; color: var(--muted); font-weight: 650; }
+
+    .photo-stage { position: relative; min-height: 650px; }
+    .photo-card { position:absolute; overflow:hidden; border-radius: 34px; box-shadow: var(--shadow); border: 8px solid rgba(255,255,255,.82); background:#ddd; }
+    .photo-card img { width:100%; height:100%; object-fit:cover; filter: saturate(1.05) contrast(1.02); }
+    .photo-card::after { content:""; position:absolute; inset:0; background: linear-gradient(180deg, transparent 48%, rgba(0,0,0,.52)); }
+    .photo-card span { position:absolute; z-index:2; left:18px; bottom:16px; color:#fff; font-weight:950; text-shadow:0 2px 18px rgba(0,0,0,.42); }
+    .p1 { width: 68%; height: 360px; right: 5%; top: 0; transform: rotate(2.5deg); }
+    .p2 { width: 45%; height: 260px; left: 0; top: 210px; transform: rotate(-5deg); }
+    .p3 { width: 48%; height: 250px; right: 0; bottom: 20px; transform: rotate(5deg); }
+    .telegram-card { position:absolute; z-index:5; width:min(340px, 86%); left: 14%; bottom: 0; border-radius: 28px; background: #10271f; color:#fff7e8; box-shadow: 0 28px 70px rgba(16,39,31,.36); border: 1px solid rgba(255,255,255,.18); overflow:hidden; }
+    .tg-top { display:flex; justify-content:space-between; padding:14px 16px; background:rgba(255,255,255,.08); color:#d8efe4; font-size:13px; }
+    .tg-body { padding:16px; display:grid; gap:10px; }
+    .bubble { background:#fff9ee; color:var(--ink); border-radius:18px; padding:13px; box-shadow: 0 10px 24px rgba(0,0,0,.18); }
+    .bubble b { color:#e8405a; }
+    .chip { display:inline-flex; width:max-content; padding:4px 9px; border-radius:99px; background:rgba(247,201,95,.34); color:#765117; font-size:12px; font-weight:950; margin-bottom:7px; }
+
+    .strip { margin: 26px 0 0; padding: 16px; border-block: 1px solid rgba(23,20,15,.10); background: rgba(255,255,255,.38); overflow:hidden; }
+    .marquee { display:flex; gap: 14px; width:max-content; animation: drift 26s linear infinite; }
+    .marquee span { padding: 9px 14px; border-radius:999px; background:#fffaf0; border:1px solid rgba(23,20,15,.1); font-weight:850; color:#56483c; white-space:nowrap; }
+    @keyframes drift { from { transform:translateX(0); } to { transform:translateX(-50%); } }
+
+    section { padding: 58px 0; }
+    .section-head { display:flex; align-items:end; justify-content:space-between; gap: 20px; margin-bottom: 22px; }
+    h2 { margin:0; font-family: ui-serif, Georgia, serif; font-size: clamp(36px, 5vw, 62px); line-height:.95; letter-spacing:-.055em; }
+    .section-head p { margin:0; color: var(--muted); max-width: 440px; font-size: 18px; }
+    .plans { display:grid; grid-template-columns: repeat(5, 1fr); gap: 12px; }
+    .plan { min-height: 250px; border-radius: 26px; padding: 16px; display:flex; flex-direction:column; justify-content:flex-end; position:relative; overflow:hidden; color:#fff; box-shadow: 0 18px 50px rgba(39,24,8,.16); }
+    .plan::before { content:""; position:absolute; inset:0; background:linear-gradient(180deg, rgba(0,0,0,.04), rgba(0,0,0,.70)); z-index:1; }
+    .plan img { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; }
+    .plan div { position:relative; z-index:2; }
+    .plan small { display:block; text-transform:uppercase; letter-spacing:.08em; font-weight:950; color:#ffd983; margin-bottom:4px; }
+    .plan strong { display:block; font-size:21px; line-height:1.03; letter-spacing:-.025em; }
+
+    .how { display:grid; grid-template-columns: .8fr 1.2fr; gap: 18px; align-items:stretch; }
+    .poster { border-radius:34px; padding:30px; color:#fff; background: linear-gradient(145deg, #174f43, #155c7a 55%, #4f285e); box-shadow: var(--shadow); position:relative; overflow:hidden; }
+    .poster::after { content:""; position:absolute; width:280px; height:280px; border-radius:50%; right:-90px; top:-80px; background:rgba(247,201,95,.23); }
+    .poster h2 { color:#fffaf0; position:relative; z-index:1; }
+    .poster p { color:#e6f4ec; font-size:18px; position:relative; z-index:1; }
+    .steps { display:grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
+    .step { background:rgba(255,255,255,.68); border:1px solid rgba(23,20,15,.11); border-radius:26px; padding:22px; box-shadow: 0 16px 40px rgba(39,24,8,.08); }
+    .num { width:38px; height:38px; border-radius:14px; display:grid; place-items:center; background:var(--ink); color:#fff; font-weight:950; margin-bottom:18px; }
+    .step strong { font-size:20px; display:block; margin-bottom:8px; letter-spacing:-.02em; }
+    .step p { color:var(--muted); margin:0; }
+
+    .submit-band { border-radius: 36px; overflow:hidden; display:grid; grid-template-columns: 1.1fr .9fr; background:#17140f; color:#fff7e8; box-shadow: var(--shadow); }
+    .submit-copy { padding: 34px; }
+    .submit-copy p { color:#dccfc0; font-size:18px; max-width:600px; }
+    .submit-photo { min-height: 320px; position:relative; }
+    .submit-photo img { width:100%; height:100%; object-fit:cover; }
+    .submit-photo::after { content:""; position:absolute; inset:0; background:linear-gradient(90deg, rgba(23,20,15,.82), transparent 55%); }
+
+    footer { padding: 44px 0 70px; color:var(--muted); }
+    .footer-grid { display:flex; justify-content:space-between; gap: 20px; border-top:1px solid rgba(23,20,15,.13); padding-top:22px; }
+
+    @media (prefers-reduced-motion: reduce) { .marquee { animation:none; } html { scroll-behavior:auto; } }
+    @media (max-width: 960px) {
+      .hero-grid, .how, .submit-band { grid-template-columns:1fr; }
+      .photo-stage { min-height: 560px; }
+      .plans { grid-template-columns: repeat(2, 1fr); }
+      .steps { grid-template-columns:1fr; }
+      .section-head { align-items:flex-start; flex-direction:column; }
+      .nav-note { display:none; }
     }
-    @media (max-width: 520px) { .grid { grid-template-columns: 1fr; } .nav { align-items:flex-start; flex-direction:column; } }
+    @media (max-width: 560px) {
+      .nav { align-items:flex-start; flex-direction:column; }
+      .nav-actions { width:100%; justify-content:space-between; }
+      .btn { width:100%; }
+      .cta-row { display:grid; gap:10px; }
+      h1 { font-size: 58px; }
+      .photo-stage { min-height: 500px; }
+      .p1 { width: 82%; height: 270px; right: 0; }
+      .p2 { width: 58%; height: 210px; top: 190px; }
+      .p3 { width: 58%; height: 200px; bottom: 8px; }
+      .telegram-card { left: 5%; bottom: 18px; }
+      .plans { grid-template-columns:1fr; }
+      .plan { min-height: 210px; }
+      .footer-grid { flex-direction:column; }
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="wrap nav">
-      <div>
-        <div class="brand"><div class="mark">✦</div><span>Hermie Weekend</span></div>
-        <div class="tag">Naperville • Aurora • Lisle • Plainfield • western suburbs</div>
+      <div class="brand"><div class="mark">✦</div><span>Hermie Weekend</span></div>
+      <div class="nav-actions">
+        <span class="nav-note">Naperville + western suburbs</span>
+        <a class="btn btn-primary" href="https://t.me/hermieweekend">Join free</a>
       </div>
-      <div class="pill">Anonymous local guide • Fridays only</div>
     </div>
   </header>
 
   <main>
-    <div class="wrap hero">
-      <div>
-        <h1>Never waste a weekend near Naperville again.</h1>
-        <p class="lede">Get a short Friday list of actually good plans: date nights, kid-friendly ideas, cheap/free picks, rainy-day backups, and hidden gems within an easy drive.</p>
-        <div class="cta-row">
-          <a class="btn btn-primary" href="https://t.me/hermieweekend">Join the free Friday list</a>
-          <a class="btn btn-secondary" href="https://tally.so/r/b5209g">Submit an event</a>
+    <section class="hero">
+      <div class="wrap hero-grid">
+        <div>
+          <div class="eyebrow"><span class="pulse"></span> One fun Friday drop. Zero doom-scrolling.</div>
+          <h1>Your weekend plans, already picked.</h1>
+          <p class="lede">A photo-rich, skimmable Telegram guide for Naperville-area date nights, kid wins, cheap escapes, rainy-day saves, and local gems worth leaving the house for.</p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="https://t.me/hermieweekend">Join the free Friday list →</a>
+            <a class="btn btn-secondary" href="https://tally.so/r/b5209g">Submit an event</a>
+          </div>
+          <div class="micro">Anonymous local guide • low-noise • built for forwarding to your “what should we do?” person</div>
         </div>
-        <div class="note">No spam. No influencer nonsense. Just useful weekend ideas.</div>
-      </div>
-      <div class="phone" aria-label="Sample Telegram weekend plan">
-        <div class="screen">
-          <div class="screen-top"><b>Hermie Weekend</b><span>Friday 8:30 AM</span></div>
-          <div class="messages">
-            <div class="msg">
-              <span class="chip">This weekend</span>
-              <h3>5 low-effort plans near Naperville</h3>
-              <p><b>Date night:</b> dinner + live music, with dessert nearby.</p>
-              <p><b>Kids:</b> indoor activity + pizza fallback if weather turns.</p>
-              <p><b>Cheap/free:</b> market, walk, coffee stop.</p>
-            </div>
-            <div class="msg">
-              <span class="chip">Rain backup</span>
-              <p>A complete indoor plan that does not require driving downtown.</p>
+        <div class="photo-stage" aria-label="Weekend scenes around the suburbs">
+          <figure class="photo-card p1"><img src="https://images.unsplash.com/photo-1514933651103-005eec06c04b?auto=format&fit=crop&w=1100&q=80" alt="Warm restaurant and bar interior" /><span>Date night without the planning tax</span></figure>
+          <figure class="photo-card p2"><img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=900&q=80" alt="Family walking outdoors in a park" /><span>Kid-friendly wins</span></figure>
+          <figure class="photo-card p3"><img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=900&q=80" alt="Scenic river and trees" /><span>Easy local escapes</span></figure>
+          <div class="telegram-card">
+            <div class="tg-top"><b>Hermie Weekend</b><span>Friday 8:30 AM</span></div>
+            <div class="tg-body">
+              <div class="bubble"><span class="chip">This weekend</span><br><b>Best date night:</b> dinner + live music + dessert nearby.</div>
+              <div class="bubble"><b>Rain backup:</b> indoor plan with parking sanity check.</div>
             </div>
           </div>
         </div>
       </div>
-    </div>
-
-    <section>
-      <div class="wrap grid">
-        <div class="card"><strong>Date nights</strong><p>Ready-to-go mini itineraries that feel planned, not random.</p></div>
-        <div class="card"><strong>Family plans</strong><p>Kid-friendly ideas with food and weather backups.</p></div>
-        <div class="card"><strong>Cheap/free</strong><p>Useful picks for when you want to leave the house without spending $150.</p></div>
-        <div class="card"><strong>Hidden gems</strong><p>Local places and events you might miss while scrolling big event sites.</p></div>
-      </div>
-    </section>
-
-    <section>
-      <div class="wrap sample">
-        <aside>
-          <h2>What you get each Friday</h2>
-          <p>One compact post you can skim in under a minute, then forward to the person who always asks, “what should we do?”</p>
-        </aside>
-        <div class="list">
-          <div class="pick"><b>Best date night:</b> A food + activity pairing with estimated vibe, distance, and backup option.</div>
-          <div class="pick"><b>Best with kids:</b> A simple plan that avoids downtown Chicago logistics.</div>
-          <div class="pick"><b>Best cheap/free:</b> A low-cost pick that still feels like doing something.</div>
-          <div class="pick"><b>Best rainy-day backup:</b> Indoor plan, parking sanity check, and nearby snack stop.</div>
-          <div class="pick"><b>One hidden gem:</b> A local place worth knowing about.</div>
+      <div class="strip" aria-hidden="true">
+        <div class="marquee">
+          <span>date nights</span><span>kids activities</span><span>free picks</span><span>rain backups</span><span>hidden gems</span><span>food stops</span><span>live music</span><span>within ~30 minutes</span>
+          <span>date nights</span><span>kids activities</span><span>free picks</span><span>rain backups</span><span>hidden gems</span><span>food stops</span><span>live music</span><span>within ~30 minutes</span>
         </div>
       </div>
     </section>
 
     <section>
-      <div class="wrap privacy">
-        <strong>Built to be low-noise.</strong>
-        <span>Hermie Weekend is designed as a simple local utility, not a social feed. Public channel, anonymous operator, and one useful post per week while we test demand.</span>
+      <div class="wrap">
+        <div class="section-head">
+          <h2>Not an event dump. A menu.</h2>
+          <p>Each Friday post is built around the situations people actually have: “we need a date,” “the kids are restless,” “it might rain,” or “I refuse to drive downtown.”</p>
+        </div>
+        <div class="plans">
+          <article class="plan"><img src="https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=600&q=80" alt="Friends eating together" /><div><small>Best date night</small><strong>Food + one memorable thing after</strong></div></article>
+          <article class="plan"><img src="https://images.unsplash.com/photo-1472162072942-cd5147eb3902?auto=format&fit=crop&w=600&q=80" alt="Child playing with bubbles" /><div><small>Best with kids</small><strong>Activity first, snack plan second</strong></div></article>
+          <article class="plan"><img src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=600&q=80" alt="Outdoor event crowd with lights" /><div><small>Cheap/free</small><strong>Feels like a plan, not a compromise</strong></div></article>
+          <article class="plan"><img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=600&q=80" alt="People in a cozy indoor venue" /><div><small>Rain backup</small><strong>Indoor ideas when the weather betrays you</strong></div></article>
+          <article class="plan"><img src="https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&w=600&q=80" alt="Local shop interior" /><div><small>Hidden gem</small><strong>The spot you’ll be glad you heard about</strong></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap how">
+        <div class="poster">
+          <h2>Designed to be useful in 45 seconds.</h2>
+          <p>No giant calendar. No “here are 87 things.” No fake influencer voice. Just a tight Friday shortlist with enough context to choose fast.</p>
+          <a class="btn btn-primary" href="https://t.me/hermieweekend">Get the next drop</a>
+        </div>
+        <div class="steps">
+          <div class="step"><div class="num">1</div><strong>We scan the weekend</strong><p>Events, venues, seasonal picks, local submissions, and always-available backups.</p></div>
+          <div class="step"><div class="num">2</div><strong>We package real plans</strong><p>Not just links — quick pairings, vibe checks, cost notes, and fallback logic.</p></div>
+          <div class="step"><div class="num">3</div><strong>You forward and go</strong><p>Send it to your partner, friend, or family chat and pretend you planned ahead.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap submit-band">
+        <div class="submit-copy">
+          <h2>Host something locals should know about?</h2>
+          <p>Restaurants, classes, venues, markets, shows, kid activities, seasonal popups, and hidden gems can submit for possible inclusion.</p>
+          <a class="btn btn-primary" href="https://tally.so/r/b5209g">Submit an event →</a>
+        </div>
+        <div class="submit-photo"><img src="https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=1000&q=80" alt="People celebrating with colorful balloons" /></div>
       </div>
     </section>
   </main>
 
   <footer>
-    <div class="wrap">© Hermie Weekend. Independent local guide. Not affiliated with the City of Naperville or any venue.</div>
+    <div class="wrap footer-grid">
+      <div><b>Hermie Weekend</b><br>Actually good weekend plans near Naperville.</div>
+      <div>Independent local guide. Not affiliated with the City of Naperville or any venue.</div>
+    </div>
   </footer>
 </body>
 </html>
