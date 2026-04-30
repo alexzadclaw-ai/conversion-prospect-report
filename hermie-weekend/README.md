@@ -50,3 +50,7 @@ Day 6–7:
 - 100 subscribers: buy a domain.
 - 250 subscribers: test sponsor outreach.
 - 500 subscribers: consider $50–$100/month local ads or paid placements.
+
+
+Custom domain target: https://hermieweekend.fun/
+Cloudflare Pages fallback: https://hermie-weekend.pages.dev/
